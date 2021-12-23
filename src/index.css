@@ -5,9 +5,140 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  padding: 20px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0; 
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.page-content {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 13em; /* Footer height */
+}
+
+h1, h2, h3, ul, li, form, #submitBtn {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  color: #FFBD35;
+  font-size: 40px;
+  font-family: 'Rubik', sans-serif;
+  float: right;
+  padding-left: 3px;
+}
+
+.title-section {
+  display: inline-block;
+}
+
+a {
+  color: #34BC28;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul.header {
+  background-color: #6ECB63;
+  padding: 0;
+}
+
+ul.header li a {
+  color: #1B1919;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+
+.active {
+  background-color: #B1E693;
+}
+
+.content {
+  background-color: #FBF4E9;
+  padding: 20px;
+  margin: 0;
+  position: relative;
+}
+
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+.form-box label {
+  display: inline-block;
+  text-align: left;
+  font-size: 16px;
+  margin: 0 0 2vh 0;
+}
+
+.form-box input {
+  display: inline-block;
+  width: 70%;
+  padding: .5rem .8rem .5rem .8rem;
+  margin: .9vw 0 ;
+  border:0;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#submitBtn {
+  display: inline-block;
+  height: 2.5rem;
+  background-color: #6ECB63;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #1B1919;
+  font-weight: bold;
+  border-radius: 7px;
+}
+
+#submitBtn:hover {
+  background-color: #B1E693;
+}
+
+.footer {
+  width: 100%;
+  background-color: #6ECB63;
+  color: #1B1919;
+  position: absolute;
+  bottom: 0;
+  height: 13rem;
+}
+
+.footer-about {
+  width: 50%;
+  display: inline-block;
+  padding-left: 10%;
+}
+
+.footer-contact {
+  width: 30%;
+  display: inline-block;
+  padding-right: 10%;
+  text-align: right;
 }
