@@ -15,10 +15,14 @@ const App = () => {
     return (
         <Router>
             <div className="page-content">
+                
                 <div className="content-wrap">
                     <div className="title-section">
                         <img src={logo} height="150" alt="FarmHub" />
-                        <h1></h1>
+                        <div className="user-section">
+                            <a href=" " className="login-link">Log in</a>
+                            <a href=" " className="signup-link">Sign up</a>
+                        </div>
                     </div>
                     <ul className="header">
                         <li><NavLink to="/">Home</NavLink></li>
@@ -33,6 +37,7 @@ const App = () => {
                     </Routes>
                     </div>
                 </div>
+
                 <div className="footer">
                     <Footer />
                 </div>
