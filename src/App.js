@@ -9,7 +9,7 @@ import {
   import Data from "./components/Data";
   import Contact from "./components/Contact";
   import Footer from "./components/Footer";
-  import logo from "./logo.png";
+  import Header from "./components/Header";
 
 const App = () => {
     return (
@@ -18,13 +18,9 @@ const App = () => {
                 
                 <div className="content-wrap">
                     <div className="title-section">
-                        <img src={logo} height="150" alt="FarmHub" />
-                        <div className="user-section">
-                            <a href=" " className="login-link">Log in</a>
-                            <a href=" " className="signup-link">Sign up</a>
-                        </div>
+                        <Header />
                     </div>
-                    <ul className="header">
+                    <ul className="header-section">
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/data">Farm Data</NavLink></li>
                         <li><NavLink to="/contact">Contact</NavLink></li>

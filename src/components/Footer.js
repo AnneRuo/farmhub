@@ -15,8 +15,8 @@ const Footer = () => {
                 <div className="footer-contact">
                     <h2 className="footer-contact-title">Contact</h2>
                     <p>anne.s.ruohonen@gmail.com 
-                        <br/><a className="url" href="https://github.com/AnneRuo" target="_blank" rel="noreferrer">AnneRuo</a>
-                        <br/><a className="url" href="https://www.linkedin.com/in/anne-ruohonen/" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <br/><a className="contact-url" href="https://github.com/AnneRuo" target="_blank" rel="noreferrer">AnneRuo</a>
+                        <br/><a className="contact-url" href="https://www.linkedin.com/in/anne-ruohonen/" target="_blank" rel="noreferrer">LinkedIn</a>
                     </p>
                 </div>
             </div>

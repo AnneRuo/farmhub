@@ -3,11 +3,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F7F7F7;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  line-height: 2;
   overflow-x: hidden;
   margin: 0;
   padding: 0; 
+  /* font-family: 'Open Sans', sans-serif; */
 }
 
 .page-content {
@@ -33,13 +35,25 @@ body {
   background-color: #fff;
   width: 100%;
   margin: 0px;
-  padding: 20px;
+  padding: 40px;
+  line-height: normal;
+}
+
+.logo-section {
+  display: inline;
+  float: left;
+}
+
+.name-section {
+  display: inline;
+  float: left;
 }
 
 .user-section {
   display: inline;
   float: right;
   padding-top: 100px;
+  padding-right: 60px;
 }
 
 .login-link {
@@ -61,16 +75,18 @@ body {
 
 .content {
   padding-top: 10px;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+  text-align: center;
 }
 
 .footer {
   width: 100%;
+  line-height: 1.5;
   flex-shrink: 0;
   padding-bottom: 20px;
   margin-top: 60px;
-  background-color: #6ECB63;
+  background-color: #fabd42;
   color: #1B1919;
 }
 
@@ -94,19 +110,28 @@ body {
   }
 }
 
-h1, h2, h3, ul, li, form, #submitBtn {
+h1 {
+  display: inline;
+  font-family: 'Baloo 2', cursive;
+  font-size: 70px;
+  font-weight: lighter;
+  color: #6ECB63;
+  padding-left: 40px;
+  letter-spacing: .5rem;
+}
+
+h2, h3, h4, ul, li, form, #submitBtn {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* h1/tagline
-h1 {
+h5 {
+  font-family: 'Sacramento', cursive;
+  font-size: 38px;
+  font-weight: lighter;
   color: #FFBD35;
-  font-size: 40px;
-  font-family: 'Rubik', sans-serif;
-  float: right;
-  padding-left: 3px;
+  padding-left: 55px;
+  margin: 0;
 }
-*/
 
 a {
   color: #34BC28;
@@ -114,20 +139,20 @@ a {
   text-decoration: none;
 }
 
-ul.header li {
+ul.header-section li {
   display: inline;
   list-style-type: none;
   margin: 0;
 }
 
-ul.header {
+ul.header-section {
   background-color: #6ECB63;
   padding: 0;
   margin-bottom: 0;
   margin-top: 0;
 }
 
-ul.header li a {
+ul.header-section li a {
   color: #1B1919;
   font-weight: bold;
   text-decoration: none;
@@ -160,6 +185,7 @@ ul.header li a {
   width: 350px;
   height: 200px;
   border-radius: 40px;
+  box-shadow: 0 0 40px rgb(163, 162, 162);
 }
 
 .form-box label {
