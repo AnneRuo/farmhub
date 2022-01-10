@@ -1,14 +1,19 @@
 import React from "react";
+import Farmers from "./Farmers";
 import farm1 from "./img/farm1.jpg";
 import farm2 from "./img/farm2.jpg";
 import farm3 from "./img/farm3.jpg";
 import farm4 from "./img/farm4.jpg";
 
+
 const Farms = () => {
+
     return (
         <div>
             <h3>Partner farms</h3>
                 <div className="farm-section">
+
+
                     <div className="farm">
                         <img src={farm1} className="farm-img" alt="Noora's farm" />
                         <h4>Noora's farm</h4>
@@ -25,6 +30,7 @@ const Farms = () => {
                         <img src={farm4} className="farm-img" alt="PartialTech Research Farm" />
                         <h4>PartialTech Research Farm</h4>
                     </div>
+
                 </div>
         </div>
     )

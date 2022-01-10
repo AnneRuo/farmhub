@@ -198,7 +198,7 @@ ul.header-section li a {
   margin: 0 0 2vh 0;
 }
 
-.form-box input {
+.form-box select {
   display: inline-block;
   width: 70%;
   padding: .5rem .8rem .5rem .8rem;
@@ -208,20 +208,21 @@ ul.header-section li a {
   font-size: 16px;
 }
 
-#submitBtn {
+.submitBtn {
   display: inline-block;
   height: 2.5rem;
   background-color: #6ECB63;
   border: 0;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
   cursor: pointer;
   font-size: 16px;
   color: #1B1919;
-  font-weight: bold;
   border-radius: 7px;
 }
 
-#submitBtn:hover {
+.submitBtn:hover {
   background-color: #B1E693;
 }

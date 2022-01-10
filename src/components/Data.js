@@ -5,6 +5,7 @@ import Form from "./Form";
 const Data = () => {
 
   const [data, setData] = useState({});
+  console.log(data);
 
   return (
     <div>
