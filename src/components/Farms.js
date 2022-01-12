@@ -31,6 +31,8 @@ const Farms = () => {
                         <h4>PartialTech Research Farm</h4>
                     </div>
 
+                    <Farmers />
+
                 </div>
         </div>
     )

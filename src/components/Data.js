@@ -1,25 +1,23 @@
 import React, { useState } from "react";
 import Form from "./Form";
+import BasicTableAll from "./BasicTableAll";
 
- 
 const Data = () => {
 
-  const [data, setData] = useState({});
-  console.log(data);
+  const [data, setData] = useState({measurements: [""]});
+  
+  const dataToShow = Array.from(data.measurements);
 
   return (
     <div>
-      <h2>Show farm data</h2>
-      <h3>Select data to show:</h3>
+      <h2>Select data to show:</h2>
 
       <div id="form">
         <Form setData={setData} />
       </div>
       <div id="data">
+        <BasicTableAll data={dataToShow} />
 
-{/*   Show data in table format
-      Add filtering options
-      Show data in graphs */}
       
       </div>
 
