@@ -16,17 +16,6 @@ import FirstPageIcon from '@mui/icons-material/FirstPage';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import LastPageIcon from '@mui/icons-material/LastPage';
-import { alpha } from '@mui/material/styles';
-import TableSortLabel from '@mui/material/TableSortLabel';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Tooltip from '@mui/material/Tooltip';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
-import DeleteIcon from '@mui/icons-material/Delete';
-import FilterListIcon from '@mui/icons-material/FilterList';
-import { visuallyHidden } from '@mui/utils';
-
 
 function TablePaginationActions(props) {
     const theme = useTheme();
@@ -89,23 +78,22 @@ TablePaginationActions.propTypes = {
     rowsPerPage: PropTypes.number.isRequired,
 };
   
-export default function BasicTableAll({data}) {
+export default function CustomPaginationActionsTable({data}) {
 
-    const dataToShow = Array.from(data.measurements);
+    const dataToShow = Array.from(data.stats);
 
-    function createData(location, datetime, value, farm_id, sensor_type) {
-      return { location, datetime, value, farm_id, sensor_type };
+    function createData(month, year, average, median, standard_deviation) {
+        return { month, year, average, median, standard_deviation };
     }
 
     const dataRows = [];
     dataToShow.forEach((item, i) => {
-      dataRows.push(createData(item.location, item.datetime, 
-        item.value, item.farm_id, item.sensor_type));
+        dataRows.push(createData(item.month, item.year, item.average, 
+            item.median, item.standard_deviation));
     })
-    // console.log(dataRows);
 
     const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(20);
+    const [rowsPerPage, setRowsPerPage] = React.useState(15);
 
     // Avoid a layout jump when reaching the last page with empty rows.
     const emptyRows =
@@ -125,10 +113,11 @@ export default function BasicTableAll({data}) {
         <Table stickyHeader sx={{ minWidth: 500 }} size="small" aria-label="a dense table custom pagination table">
         <TableHead>
             <TableRow>
-                <TableCell align="right">Farm</TableCell>
-                <TableCell align="right">Datetime</TableCell>
-                <TableCell align="right">Sensor</TableCell>
-                <TableCell align="right">Value</TableCell>
+                <TableCell align="right">Year</TableCell>
+                <TableCell align="right">Month</TableCell>
+                <TableCell align="right">Average</TableCell>
+                <TableCell align="right">Median</TableCell>
+                <TableCell align="right">Standard deviation</TableCell>
             </TableRow>
         </TableHead>
             <TableBody>
@@ -137,10 +126,11 @@ export default function BasicTableAll({data}) {
                 : dataRows
             ).map((row) => (
                 <TableRow key={row.index}>
-                    <TableCell style={{ width: 20 }} align="right">{row.location}</TableCell>
-                    <TableCell style={{ width: 20 }} align="right">{row.datetime}</TableCell>
-                    <TableCell style={{ width: 20 }} align="right">{row.sensor_type}</TableCell>
-                    <TableCell style={{ width: 20 }} align="right">{row.value}</TableCell>
+                    <TableCell style={{ width: 20 }} align="right">{row.year}</TableCell>
+                    <TableCell style={{ width: 20 }} align="right">{row.month}</TableCell>
+                    <TableCell style={{ width: 20 }} align="right">{row.average}</TableCell>
+                    <TableCell style={{ width: 20 }} align="right">{row.median}</TableCell>
+                    <TableCell style={{ width: 20 }} align="right">{row.standard_deviation}</TableCell>
                 </TableRow>
             ))}
 
@@ -153,7 +143,7 @@ export default function BasicTableAll({data}) {
                 <TableFooter>
                     <TableRow>
                         <TablePagination
-                        rowsPerPageOptions={[20, 50, 100, { label: 'All', value: -1 }]}
+                        rowsPerPageOptions={[15, 30, 50, { label: 'All', value: -1 }]}
                         colSpan={3}
                         count={dataRows.length}
                         rowsPerPage={rowsPerPage}

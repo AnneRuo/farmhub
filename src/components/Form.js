@@ -14,7 +14,7 @@ const getMonthlyData = async (farmId, sensor) => {
     return await res.json();
 }
 
-const Form = ({setData}) => {
+const Form = ({setAllData, setMonthlyData, setDataType}) => {
 
     const [farmData, setFarmData] = useState({
         farmId: "",
@@ -26,10 +26,10 @@ const Form = ({setData}) => {
     };
 
     const handleSubmit = async (event) => {event.preventDefault();
-        
         dataType.type === 1 
-        ? setData(await getAllTimeData(farmData.farmId)) 
-        : setData(await getMonthlyData(farmData.farmId, farmData.sensorType));
+        ? setAllData(await getAllTimeData(farmData.farmId))
+        : setMonthlyData(await getMonthlyData(farmData.farmId, farmData.sensorType));
+        setDataType(dataType.type);
     }
 
     function handleChange(event) {
