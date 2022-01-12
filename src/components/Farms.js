@@ -3,7 +3,6 @@ import farm1 from "./img/farm1.jpg";
 import farm2 from "./img/farm2.jpg";
 import farm3 from "./img/farm3.jpg";
 import farm4 from "./img/farm4.jpg";
-
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -14,6 +13,13 @@ import Typography from '@mui/material/Typography';
 const Farms = () => {
 
     const [farms, setFarms] = useState(null);
+
+    const images= {
+        1: farm1,
+        2: farm2,
+        3: farm3,
+        4: farm4
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -38,7 +44,7 @@ const Farms = () => {
                     <CardMedia
                       component="img"
                       height="140"
-                      image={`farm${farm.farm_id}`}
+                      image={images[farm.farm_id]}
                       alt={farm.name}
                     />
                     <CardContent>
