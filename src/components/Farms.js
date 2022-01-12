@@ -1,47 +1,69 @@
-import React from "react";
-import Farmers from "./Farmers";
+import React, { useState, useEffect } from "react";
 import farm1 from "./img/farm1.jpg";
 import farm2 from "./img/farm2.jpg";
 import farm3 from "./img/farm3.jpg";
 import farm4 from "./img/farm4.jpg";
 
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 const Farms = () => {
 
-    return (
-        <div>
-            <h3>Partner farms</h3>
-                <div className="farm-section">
+    const [farms, setFarms] = useState(null);
 
+    useEffect(() => {
+        const fetchData = async () => {
+          const response = await fetch('http://localhost:8080/v1/farms');
+          const json = await response.json();
+          setFarms(json);
+        }
+      
+        fetchData()
+          .catch(console.error);;
+    }, [])
 
-                    <div className="farm">
-                        <img src={farm1} className="farm-img" alt="Noora's farm" />
-                        <h4>Noora's farm</h4>
-                    </div>
-                    <div className="farm">
-                        <img src={farm2} className="farm-img" alt="Friman Metsola collective" />
-                        <h4>Friman Metsola collective</h4>
-                    </div>
-                    <div className="farm">
-                        <img src={farm3} className="farm-img" alt="Organic Ossi's Impact That Lasts plantation" />
-                        <h4>Organic Ossi's Impact That Lasts plantation</h4>
-                    </div>
-                    <div className="farm">
-                        <img src={farm4} className="farm-img" alt="PartialTech Research Farm" />
-                        <h4>PartialTech Research Farm</h4>
-                    </div>
+    if (farms === null) {
+        return <p>Loading farms...</p>;
+      }
+        return (
+            <div>
+                <h2>Partner farms</h2>
+            
+                {farms.map(farm => (
+                    <Card className="farm-card" sx={{ maxWidth: 400 }} key={farm.farm_id}>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={`farm${farm.farm_id}`}
+                      alt={farm.name}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        {farm.name}
+                      </Typography>
+                      <Typography variant="h7" color="text">
+                        Location: {farm.location}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        Doggies frogs crickets chirp. In the straw rain barrels. Gourds utters 
+                        at welding equipment a oink oink haybine. Pick up truck livestock, pets 
+                        and storage shed, troughs feed bale manure, is garden wheat oats at augers. 
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small">Show on map</Button>
+                      <Button size="small">Contact</Button>
+                    </CardActions>
+                  </Card>
 
-                    <Farmers />
-
-                </div>
-        </div>
-    )
-        
-        
-/*     
-        Add a map which shows the location of the farms and which can be 
-        interacted with (you can decide where the farms are) */
-    
-}
+                ))}
+                
+            </div>    
+        );
+    }
 
 export default Farms;

@@ -167,28 +167,9 @@ ul.header-section li a {
   background-color: #B1E693;
 }
 
-.farm-section {
-  display: grid;
-  margin: 0px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-auto-rows: auto;
-  grid-column-gap: 10px;
-  grid-row-gap: 30px;
-  margin-bottom: 40px;
-}
-
-.farm {
-  margin: 0 auto;
-  padding: 30px;
-  place-self: center;
-  text-align: center;
-}
-
-.farm-img {
-  width: 350px;
-  height: 200px;
-  border-radius: 40px;
-  box-shadow: 0 0 40px rgb(163, 162, 162);
+.farm-card {
+  display: inline-block;
+  margin: 30px;
 }
 
 .form-box label {

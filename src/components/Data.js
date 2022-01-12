@@ -17,6 +17,7 @@ const Data = () => {
         <Form setAllData={setAllData} setMonthlyData={setMonthlyData} setDataType={setDataType}/>
       </div>
       <div id="data">
+        
         {(dataType === 1 && allData.measurements.length > 1) ? <BasicTableAll data={allData} /> : null}
         {(dataType === 2 && monthlyData.stats.length > 1) ? <BasicTableMonthly data={monthlyData} /> : null}
 
