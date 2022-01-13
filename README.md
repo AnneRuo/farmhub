@@ -2,7 +2,7 @@
 
 The project has been made as a part of Solita's Dev Acamedy applying process.
 
-The full pre-assignment can be found here: 
+The full pre-assignment description can be found here: 
 
 **https://github.com/solita/dev-academy-2022-exercise**
 
