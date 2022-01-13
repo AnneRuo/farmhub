@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Solita Dev Academy pre-assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project has been made as a part of Solita's Dev Acamedy applying process.
 
-## Available Scripts
+The full pre-assignment can be found here: 
 
-In the project directory, you can run:
+**https://github.com/solita/dev-academy-2022-exercise**
 
-### `npm start`
+### Description of the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The purpose of the Frontend project was to show farm data in graphs and in table format with filtering options. My project has the following features:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Startpage
+- Farms: display farms and their details
+- Farm Data: dispay either all data from chosen farm or monthly data from chosen farm and sensor
+- Contact
+- My Farm: for users logged in
+- User login and sign up 
 
-### `npm test`
+### Technologies used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Frontend is created with React. Application uses provided simple server as a backend. I have used MUI component library for UI and showing data in tables. I have not used any React component libraries before this project and it feels like a new world has opened up for me. I can hardly wait to get to know all the possibilities better.
 
-### `npm run build`
+## Cloning and Running the Application in local
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For running the server install Java runtime environment (version 8 or newer).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For the frontend you will need `node` and `npm` installed globally on your machine.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the project into local
 
-### `npm run eject`
+`git clone https://github.com/AnneRuo/farmhub.git`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Install all the npm packages. Go into the project folder and type the following command to install all npm packages
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`cd farmhub`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`npm install`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Start the server with command 
 
-## Learn More
+`java -jar bin/exercise-server.jar`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In order to run the application type the following command
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm start`
 
-### Code Splitting
+The application runs on **http://localhost:3000**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+You can view OpenApi-documentation from **http://localhost:8080**
 
-### Analyzing the Bundle Size
+## Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+How to run them
+## Project Status
 
-### Making a Progressive Web App
+This project is still in development. Things to do:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [ ] Table filtering
+- [ ] Tests
+- [ ] Map showing the location of the farms
+- [ ] Show data in graphs
+- [ ] User login
+- [ ] User management
+- [ ] UI for adding data to farms and creating new farms
