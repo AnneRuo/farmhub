@@ -47,8 +47,6 @@ const columns = [
 
 export default function DataGridMonthly({ data }) {
 
-  console.log(data.farm_id);
-
   const dataToShow = Array.from(data.stats);
 
   function createData(month, year, average, median, standard_deviation, id) {

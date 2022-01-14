@@ -7,11 +7,14 @@ import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
-import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
+import MapDialog from './MapDialog'
+import Button from '@material-ui/core/Button'
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 const Farms = () => {
-  const [farms, setFarms] = useState(null)
+
+  const [farms, setFarms] = useState(null);
 
   const images = {
     1: farm1,
@@ -29,6 +32,7 @@ const Farms = () => {
 
     fetchData().catch(console.error)
   }, [])
+
 
   if (farms === null) {
     return <p>Loading farms...</p>
@@ -60,8 +64,11 @@ const Farms = () => {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Show on map</Button>
-            <Button size="small">Contact</Button>
+            <ButtonGroup>
+              <MapDialog btnTxt="Show Map" farm={farm.name} id={farm.farm_id} />
+            </ButtonGroup>
+            <Button color="secondary">Contact</Button>
+            
           </CardActions>
         </Card>
       ))}

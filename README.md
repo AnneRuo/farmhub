@@ -11,7 +11,7 @@ The full pre-assignment description can be found here:
 The purpose of the Frontend project was to show farm data in graphs and in table format with filtering options. My project has the following features:
 
 - Startpage
-- Farms: display farms and their details
+- Farms: display farms with details and location in Google Maps
 - Farm Data: dispay either all data from chosen farm or monthly data from chosen farm and sensor
 - Contact
 - My Farm: for users logged in (_coming soon_)
@@ -58,7 +58,6 @@ How to run them
 This project is still in development. Things to do:
 
 - [ ] Tests
-- [ ] Map showing the location of the farms
 - [ ] Show data in graphs
 - [ ] User login and sign up
 - [ ] My Farm for users logged in
