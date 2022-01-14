@@ -2,7 +2,7 @@
 
 The project has been made as a part of Solita's Dev Acamedy applying process.
 
-The full pre-assignment description can be found here: 
+The full pre-assignment description can be found here:
 
 **https://github.com/solita/dev-academy-2022-exercise**
 
@@ -14,8 +14,8 @@ The purpose of the Frontend project was to show farm data in graphs and in table
 - Farms: display farms and their details
 - Farm Data: dispay either all data from chosen farm or monthly data from chosen farm and sensor
 - Contact
-- My Farm: for users logged in
-- User login and sign up 
+- My Farm: for users logged in (_coming soon_)
+- User login and sign up (_coming soon_)
 
 ### Technologies used
 
@@ -37,7 +37,7 @@ Install all the npm packages. Go into the project folder and type the following 
 
 `npm install`
 
-Start the server with command 
+Start the server with command
 
 `java -jar bin/exercise-server.jar`
 
@@ -52,14 +52,15 @@ You can view OpenApi-documentation from **http://localhost:8080**
 ## Tests
 
 How to run them
+
 ## Project Status
 
 This project is still in development. Things to do:
 
-- [ ] Table filtering
 - [ ] Tests
 - [ ] Map showing the location of the farms
 - [ ] Show data in graphs
-- [ ] User login
+- [ ] User login and sign up
+- [ ] My Farm for users logged in
 - [ ] User management
 - [ ] UI for adding data to farms and creating new farms

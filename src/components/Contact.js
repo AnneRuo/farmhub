@@ -9,7 +9,7 @@ const Contact = () => {
         I am an application consultant, payroll and HR system key user and a
         helpdesk person. I am also passionate about learning new things. Two
         years ago on a whim I enrolled in a Python course and I was completely
-        hooked after my first `&quot;`Hello, World`&quot;`.
+        hooked after my first &quot;Hello World&quot;.
       </p>
       <p>
         In two years, I have completed many courses, done my own projects and
@@ -27,7 +27,7 @@ const Contact = () => {
         <a href="https://anneruo.github.io/">GitHub page</a>.
       </p>
 
-      <h3>Let`&quot;`s code together a greener future!</h3>
+      <h3>Let&apos;s code together a greener future!</h3>
     </div>
   )
 }

@@ -208,6 +208,7 @@ ul.header-section li a {
   background-color: #B1E693;
 }
 
-.table {
+.data-grid {
+  margin: auto;
   margin-top: 50px;
 }

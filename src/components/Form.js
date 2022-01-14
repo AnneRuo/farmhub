@@ -13,12 +13,6 @@ const getMonthlyData = async (farmId, sensor) => {
   return await res.json()
 }
 
-Form.propTypes = {
-  setAllData: PropTypes.func,
-  setMonthlyData: PropTypes.func,
-  setDataType: PropTypes.number,
-}
-
 const Form = ({ setAllData, setMonthlyData, setDataType }) => {
   const [farmData, setFarmData] = useState({
     farmId: '',
@@ -59,9 +53,9 @@ const Form = ({ setAllData, setMonthlyData, setDataType }) => {
             <option value="">Choose...</option>
             <option value="1">Friman Metsola Collective</option>
             <option value="2">PartialTech Research Farm</option>
-            <option value="3">Noora`&apos;`s Farm</option>
+            <option value="3">Noora&apos;s Farm</option>
             <option value="4">
-              Organic Ossi`&apos;`s Impact That Lasts Plantation
+              Organic Ossi&apos;s Impact That Lasts Plantation
             </option>
           </select>
 
@@ -99,3 +93,9 @@ const Form = ({ setAllData, setMonthlyData, setDataType }) => {
 }
 
 export default Form
+
+Form.propTypes = {
+  setAllData: PropTypes.func,
+  setMonthlyData: PropTypes.func,
+  setDataType: PropTypes.func,
+}
