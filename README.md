@@ -30,9 +30,11 @@ Clone the project into local
 
 `git clone https://github.com/AnneRuo/farmhub.git`
 
-Install all the npm packages. Go into the project folder and type the following command to install all npm packages
+Install all the npm packages. Go into the project folder
 
 `cd farmhub`
+
+and type the following command to install all npm packages
 
 `npm install`
 
