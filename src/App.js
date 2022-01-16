@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   NavLink,
   Route,
@@ -11,14 +11,18 @@ import Data from './components/Data'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import MyFarm from './components/MyFarm'
 
 const App = () => {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  
   return (
     <Router>
       <div className="page-content">
         <div className="content-wrap">
           <div className="title-section">
-            <Header />
+            <Header loggedIn={setIsLoggedIn}/>
           </div>
           <ul className="header-section">
             <li>
@@ -27,6 +31,9 @@ const App = () => {
             <li>
               <NavLink to="/farms">Farms</NavLink>
             </li>
+            {isLoggedIn && <li>
+              <NavLink to="/myfarm">My Farm</NavLink>
+            </li>}
             <li>
               <NavLink to="/data">Farm Data</NavLink>
             </li>
@@ -38,6 +45,7 @@ const App = () => {
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/farms" element={<Farms />} />
+              <Route exact path="/myfarm" element={<MyFarm />} />
               <Route path="/data" element={<Data />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>

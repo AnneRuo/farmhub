@@ -1,7 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import logo from './img/logo.png'
+import LoginForm from './LoginForm'
 
-const Header = () => {
+const Header = ({setIsLoggedIn}) => {
+  
   return (
     <header className="page-header">
       <div className="logo-section">
@@ -14,9 +17,11 @@ const Header = () => {
       </div>
 
       <div className="user-section">
-        <a href=" " className="login-link">
-          Log in
-        </a>
+
+        <button className='login-link'>
+          <LoginForm btnTxt="Log in" isLoggedin={setIsLoggedIn}/>
+        </button>
+          
         <a href=" " className="signup-link">
           Sign up
         </a>
@@ -25,4 +30,9 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;
+
+
+Header.propTypes = {
+  setIsLoggedIn: PropTypes.boolean,
+}

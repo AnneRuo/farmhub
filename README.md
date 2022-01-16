@@ -14,8 +14,6 @@ The purpose of the Frontend project was to show farm data in graphs and in table
 - Farms: display farms with details and location in Google Maps
 - Farm Data: dispay either all data from chosen farm or monthly data from chosen farm and sensor
 - Contact
-- My Farm: for users logged in (_coming soon_)
-- User login and sign up (_coming soon_)
 
 ### Technologies used
 
@@ -48,10 +46,6 @@ In order to run the application type the following command
 The application runs on **http://localhost:3000**
 
 You can view OpenApi-documentation from **http://localhost:8080**
-
-## Tests
-
-How to run them
 
 ## Project Status
 
