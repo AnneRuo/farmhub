@@ -20,6 +20,16 @@ The purpose of the Frontend project was to show farm data in graphs and in table
 
 Frontend is created with React. Application uses provided simple server as a backend. I have used MUI component library for UI and showing data in tables. I have not used any React component libraries before this project and it feels like a new world has opened up for me. I can hardly wait to get to know all the possibilities better.
 
+## Project Status
+
+This project is still in development. Things to do:
+
+- [ ] Tests
+- [ ] Show data in graphs
+- [ ] User login and sign up
+- [ ] User management
+- [ ] UI for adding data to farms and creating new farms
+
 ## Cloning and Running the Application in local
 
 For running the server install Java runtime environment (version 8 or newer).
@@ -49,13 +59,3 @@ In order to run the application type the following command
 The application runs on **http://localhost:3000**
 
 You can view OpenApi-documentation from **http://localhost:8080**
-
-## Project Status
-
-This project is still in development. Things to do:
-
-- [ ] Tests
-- [ ] Show data in graphs
-- [ ] User login and sign up
-- [ ] User management
-- [ ] UI for adding data to farms and creating new farms
