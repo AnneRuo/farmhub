@@ -10,18 +10,14 @@ const Header = ({setIsLoggedIn}) => {
       <div className="logo-section">
         <img src={logo} height="150" alt="FarmHub" />
       </div>
-
       <div className="name-section">
         <h1>farmhub</h1>
         <h5>Gathers farms together</h5>
       </div>
-
       <div className="user-section">
-
         <button className='login-link'>
           <LoginForm btnTxt="Log in" isLoggedin={setIsLoggedIn}/>
         </button>
-          
         <a href=" " className="signup-link">
           Sign up
         </a>
@@ -31,7 +27,6 @@ const Header = ({setIsLoggedIn}) => {
 }
 
 export default Header;
-
 
 Header.propTypes = {
   setIsLoggedIn: PropTypes.bool,

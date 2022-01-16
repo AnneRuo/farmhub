@@ -34,7 +34,6 @@ const LoginForm = ({btnTxt, setIsLoggedIn}) => {
       <Button color="secondary" onClick={handleClickOpen("paper")}>
         {btnTxt}
       </Button>
-
       <Dialog
         open={open}
         onClose={handleClose}
@@ -56,7 +55,6 @@ const LoginForm = ({btnTxt, setIsLoggedIn}) => {
             </form>
           </DialogContentText>
         </DialogContent>
-        
       </Dialog>
     </div>
   );

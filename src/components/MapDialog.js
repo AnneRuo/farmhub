@@ -43,7 +43,6 @@ const MapDialog = ({btnTxt, farm, id}) => {
       <Button color="secondary" onClick={handleClickOpen("paper")}>
         {btnTxt}
       </Button>
-
       <Dialog 
         open={open}
         onClose={handleClose}
@@ -88,5 +87,5 @@ MapDialog.propTypes = {
     btnTxt: PropTypes.string,
     farm: PropTypes.string,
     location: PropTypes.string,
-    id: PropTypes.number,
+    id: PropTypes.string,
   }

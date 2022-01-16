@@ -67,8 +67,7 @@ const Farms = () => {
             <ButtonGroup>
               <MapDialog btnTxt="Show Map" farm={farm.name} id={farm.farm_id} />
             </ButtonGroup>
-            <Button color="secondary">Contact</Button>
-            
+            <Button color="secondary">Contact</Button>  
           </CardActions>
         </Card>
       ))}

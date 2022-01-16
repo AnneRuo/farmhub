@@ -51,7 +51,6 @@ const App = () => {
             </Routes>
           </div>
         </div>
-
         <div className="footer">
           <Footer />
         </div>
