@@ -9,7 +9,6 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0; 
-  /* font-family: 'Open Sans', sans-serif; */
 }
 
 .page-content {
@@ -175,17 +174,17 @@ footer a {
   color: #1B1919;
 }
 
-ul.header-section li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-}
-
 ul.header-section {
   background-color: #6ECB63;
   padding: 0;
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: -10px;
+}
+
+ul.header-section li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
 }
 
 ul.header-section li a {

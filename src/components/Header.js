@@ -34,5 +34,5 @@ export default Header;
 
 
 Header.propTypes = {
-  setIsLoggedIn: PropTypes.boolean,
+  setIsLoggedIn: PropTypes.bool,
 }

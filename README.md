@@ -12,6 +12,7 @@ The purpose of the Frontend project was to show farm data in graphs and in table
 
 - Startpage
 - Farms: display farms with details and location in Google Maps
+- My Farm for users logged in
 - Farm Data: dispay either all data from chosen farm or monthly data from chosen farm and sensor
 - Contact
 
@@ -54,6 +55,5 @@ This project is still in development. Things to do:
 - [ ] Tests
 - [ ] Show data in graphs
 - [ ] User login and sign up
-- [ ] My Farm for users logged in
 - [ ] User management
 - [ ] UI for adding data to farms and creating new farms

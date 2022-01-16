@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types'
@@ -67,6 +67,8 @@ export default function DataGridAll({ data }) {
     )
   })
 
+  const [pageSize, setPageSize] = useState(50);
+
   return (
     <Box className='data-grid'
       sx={{
@@ -81,8 +83,10 @@ export default function DataGridAll({ data }) {
         density='compact'
         rows={dataRows}
         columns={columns}
-        pageSize={50}
-        rowsPerPageOptions={[50]}
+        pageSize={pageSize}
+        onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
+        rowsPerPageOptions={[25, 50, 100]}
+        pagination
       />
     </Box>
   );

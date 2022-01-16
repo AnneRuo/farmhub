@@ -19,5 +19,5 @@ const Login = ({setIsLoggedIn}) => {
 export default Login;
 
 Login.propTypes = {
-  setIsLoggedIn: PropTypes.boolean,
+  setIsLoggedIn: PropTypes.bool,
 }

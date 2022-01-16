@@ -66,5 +66,5 @@ export default LoginForm;
 
 LoginForm.propTypes = {
     btnTxt: PropTypes.string,
-    setIsLoggedIn: PropTypes.boolean,
+    setIsLoggedIn: PropTypes.bool,
 }
